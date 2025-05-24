@@ -1,0 +1,76 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* logo section */
+.logo {
+  font-size: 45px;
+  color: rgb(0, 0, 213);
+  justify-content: space-around;
+}
+
+/* logo span(Inline Element): takes width as per size, not all the area */
+.logo span {
+  color: rgb(0, 0, 123);
+}
+
+/* navbar position */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+/* links */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: green;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  justify-content: space-around;
+}
+
+/* links hover effect */
+a:hover {
+  color: purple;
+  transition: 0.5s;
+}
+
+/* links after effect */
+a:after {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* links after hover effect */
+a:hover:after {
+  width: 100%;
+}
