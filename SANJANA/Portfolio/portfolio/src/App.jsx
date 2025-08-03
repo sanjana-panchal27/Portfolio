@@ -1,7 +1,9 @@
+import About from './components/About/About.tsx';
+
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <About />
     </>
   );
 }
