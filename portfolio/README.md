@@ -15,3 +15,9 @@ If you are developing a production application, we recommend using TypeScript wi
 
 cd portfolio
 npm run dev
+
+# push the code
+
+git branch
+main\*
+git push origin main
