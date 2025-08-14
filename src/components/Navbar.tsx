@@ -1,24 +1,129 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <>
-      <header>
-        <nav className='relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"'>
-          <ul>
-            <li>
-              <Link to="" className=''>Home</Link>
-              <Link to="">About me</Link>
-              <Link to="">Projects</Link>
-              <Link to="">Skills</Link>
-              <Link to="">Services</Link>
-              <Link to="">Blog</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+    <nav className="sticky top-0 z-50 w-full bg-blue-900 text-white shadow-lg">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <Link to="/" className="text-2xl font-bold text-white">
+              My Portfolio
+            </Link>
+          </div>
+
+          <div className="hidden md:flex justify-around items-center space-x-8 ">
+            <Link
+              to="/"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              About me
+            </Link>
+            <Link
+              to="/projects"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/skills"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              Skills
+            </Link>
+            <Link
+              to="/services"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              Services
+            </Link>
+            <Link
+              to="/blog"
+              className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
+            >
+              Blog
+            </Link>
+          </div>
+
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`md:hidden ${
+          isOpen ? 'block' : 'hidden'
+        } bg-blue-950 transition-all duration-300 ease-in-out`}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300 transition-colors duration-300 w-full text-center"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
+          >
+            About me
+          </Link>
+          <Link
+            to="/projects"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
+          >
+            Projects
+          </Link>
+          <Link
+            to="/skills"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
+          >
+            Skills
+          </Link>
+          <Link
+            to="/services"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
+          >
+            Services
+          </Link>
+          <Link
+            to="/blog"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
+          >
+            Blog
+          </Link>
+        </div>
+      </div>
+    </nav>
   );
 };
 
