@@ -11,12 +11,10 @@ Currently, two official plugins are available:
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-# start project with this commands
+## 🛠 Installation and Setup Instructions
 
-npm run dev
+1. Installation: `npm install`
 
-# push the code
+2. In the project directory, you can run: `npm run dev`
 
-git branch
-main\*
-git push origin main
+

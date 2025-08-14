@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // State for the navbar background transparency
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    //scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 w-full bg-blue-900 text-white shadow-lg">
+    <nav
+      className="sticky top-0 z-50 w-full bg-blue-900 text-white shadow-lg {`fixed top-0 z-50 w-full transition-colors duration-300 ${
+  isScrolled ? 'bg-blue-900 shadow-lg' : 'bg-transparent'
+}`}"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
