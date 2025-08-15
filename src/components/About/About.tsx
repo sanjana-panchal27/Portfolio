@@ -8,7 +8,6 @@ import Toolstack from './Toolstack';
 const About = () => {
   return (
     <>
-  
       <Particle />
       <Github />
       <Techstack />
