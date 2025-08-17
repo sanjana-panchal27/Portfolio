@@ -3,7 +3,7 @@ import About from './components/About/About';
 import Navbar from './components/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer';
-import Github from './components/About/Github';
+import Project from './components/Projects/Projects';
 
 function App() {
   return (
@@ -12,9 +12,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="" element={<Home />} />
-          <Route path="" element={<About />} />
-          <Route path="" element={<Github />} />
+          {/* <Route path="" element={<About />} /> */}
         </Routes>
+        <About/>
+        <Project />
         <Footer />
       </BrowserRouter>
     </>

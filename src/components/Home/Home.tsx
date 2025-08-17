@@ -1,6 +1,6 @@
 import React from 'react';
 import Photo from '../../Assets/Photo.jpg';
-import Footer from '../Footer';
+
 
 const Home = () => {
   return (
