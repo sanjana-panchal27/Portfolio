@@ -1,5 +1,7 @@
 import React from 'react';
 import Photo from '../../Assets/Photo.jpg';
+import Footer from '../Footer';
+
 const Home = () => {
   return (
     <>
@@ -61,17 +63,17 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="div">
-            <div className="div">
-              <h1>FIND ME ON</h1>
+
+          <div className="text-2xl items-center justify-center m-6 p-6 mb-3.5">
+            <div className="text-white ">
+              <h1 className="mb-6">FIND ME ON</h1>
             </div>
-            <div className="div">
+            <div className="text-white">
               <p>
                 Feel Free to <span>Connect with me</span>
               </p>
             </div>
           </div>
-          <div className="div"></div>
         </div>
       </div>
     </>
