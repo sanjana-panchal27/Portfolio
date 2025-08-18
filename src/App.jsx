@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home/Home';
 import Footer from './components/Footer';
 import Project from './components/Projects/Projects';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
@@ -11,10 +12,12 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="" element={<Home />} />
-          {/* <Route path="" element={<About />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="/skill" element={<Skills />} /> */}
         </Routes>
-        <About/>
+
         <Project />
         <Footer />
       </BrowserRouter>
