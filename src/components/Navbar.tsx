@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="sticky top-0 z-50 w-full bg-blue-900 text-white shadow-lg {`fixed top-0 z-50 w-full transition-colors duration-300 ${
+      className="sticky top-0 z-50 w-full bg-gradient-to-r from-slate-800 to-blue-950 text-white shadow-lg {`fixed top-0 z-50 w-full transition-colors duration-300 ${
   isScrolled ? 'bg-blue-900 shadow-lg' : 'bg-transparent'
 }`}"
     >

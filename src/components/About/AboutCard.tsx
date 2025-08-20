@@ -5,7 +5,7 @@ const AboutCard = () => {
   return (
     // Main container acting as a card with a dark gradient, rounded corners, and shadow.
     <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl p-6 md:p-8 text-gray-200">
-      {/* Blockquote for the main content to give it a literary feel. */}
+     
       <blockquote className="font-sans">
         <p className="text-xl leading-relaxed mb-4 text-white">
           Hi Everyone, I am{' '}

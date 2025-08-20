@@ -12,7 +12,7 @@ import {
 const Techstack = () => {
   return (
     <>
-      <h1>Professional Skillset</h1>
+      <h1>Techstack</h1>
     </>
   );
 };
