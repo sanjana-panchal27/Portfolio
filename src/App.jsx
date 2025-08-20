@@ -18,7 +18,7 @@ function App() {
           {/* <Route path="/skill" element={<Skills />} /> */}
         </Routes>
 
-        <Project />
+ 
         <Footer />
       </BrowserRouter>
     </>
