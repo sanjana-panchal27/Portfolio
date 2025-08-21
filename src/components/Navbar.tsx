@@ -63,10 +63,10 @@ const Navbar = () => {
               Projects
             </Link>
             <Link
-              to="/skills"
+              to="/resume"
               className="text-lg transition-all duration-300 p-1.5 rounded-xl hover:text-blue-950 hover:bg-slate-300 hover:scale-105"
             >
-              Skills
+              Resume
             </Link>
             <Link
               to="/services"
@@ -125,11 +125,11 @@ const Navbar = () => {
             Projects
           </Link>
           <Link
-            to="/skills"
+            to="/resume"
             onClick={() => setIsOpen(false)}
             className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-blue-300  transition-colors duration-300 w-full text-center"
           >
-            Skills
+            Resume
           </Link>
           <Link
             to="/services"

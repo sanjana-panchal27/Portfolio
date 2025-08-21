@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="bg-slate-900 p-8 text-gray-200">
       <Particle />
-      <div className="p-6  rounded-3xl">
+      <div className="p-6 rounded-3xl">
         <h1 className="text-4xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-purple-500 to-pink-500">
           Know Who <span className="text-white">I'M</span>
         </h1>
