@@ -1,9 +1,7 @@
 import React from 'react';
 
-// AboutCard component styled with Tailwind CSS to match the screenshot's aesthetic.
 const AboutCard = () => {
   return (
-    // Main container acting as a card with a dark gradient, rounded corners, and shadow.
     <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl shadow-xl p-6 md:p-8 text-gray-200">
      
       <blockquote className="font-sans">
@@ -19,13 +17,12 @@ const AboutCard = () => {
           I've completed my Bachelor's degree B.Sc.IT June, 2025.
         </p>
 
-        {/* List of hobbies with a descriptive heading. */}
         <div className="mt-8">
           <p className="text-lg font-medium text-white mb-3">
             Apart from coding, some other activities that I love to do:
           </p>
           <ul className="list-none pl-0">
-            {/* List items with inline SVG icons for styling. */}
+
             <li className="flex items-center mb-2 text-gray-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

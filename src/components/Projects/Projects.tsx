@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ProjectCards from './ProjectCards';
 import RUPlacementCell from '../../Assets/Projects/RUPlacementCell.png';
 import DocuHub from '../../Assets/Projects/DocuHub.png';
