@@ -4,19 +4,21 @@ import { CgWebsite } from 'react-icons/cg';
 
 function ProjectCards(props) {
   return (
-    <div className="rounded-lg shadow-lg bg-gry-800 p-6 border border-gray-700 mt-6 w-100 ">
+    <div className="rounded-lg shadow-lg bg-gray-900 p-6 border border-gray-700 h-full flex flex-col mt-6">
       <img
-        className="rounded-t-lg w-100 mb-4"
+        className="rounded-t-lg w-full mb-4 h-64 object-cover"
         src={props.imgPath}
         alt="card-img"
       />
 
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         <h4 className="text-white font-bold text-xl mb-4">{props.title}</h4>
+
         <p className="text-gray-400 text-justify text-sm mb-4">
           {props.description}
         </p>
-        <div className="flex flex-wrap justify-evenly">
+
+        <div className="flex flex-wrap gap-2 justify-around">
           <a
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors duration-200 ease-in-out"
             href={props.ghLink}
