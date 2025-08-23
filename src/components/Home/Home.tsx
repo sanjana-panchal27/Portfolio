@@ -4,11 +4,40 @@ import Photo from '../../Assets/Photo.jpg';
 const Home = () => {
   return (
     <>
+      <style>
+        {`
+        @keyframes wave-animation {
+          0% { transform: rotate(0deg); }
+          10% { transform: rotate(14deg); }
+          20% { transform: rotate(-8deg); }
+          30% { transform: rotate(14deg); }
+          40% { transform: rotate(-4deg); }
+          50% { transform: rotate(10deg); }
+          60% { transform: rotate(0deg); }
+          100% { transform: rotate(0deg); }
+        }
+
+        .animate-wave {
+          animation-name: wave-animation;
+          animation-duration: 2.1s;
+          animation-iteration-count: infinite;
+          display: inline-block;
+        }
+        `}
+      </style>
+
       <div className=" bg-slate-900 h-screen flex items-center justify-center sm:p-8 lg:p-12 font-sans">
         <div className=" flex flex-col md:flex-row items-center justify-around w-full max-w-7xl mx-auto mb-16 md:mb-24 mt-8 md:mt-0">
           <div className="order-2 md:order-1 text-center md:text-left p-4 md:p-8">
             <h1 className="bg-gradient-to-r from-blue-500 to-purple-950 text-transparent bg-clip-text text-4xl sm:text-3xl lg:text-4xl font-extrabold mb-2 ">
               Hi There!{' '}
+              <span
+                className="text-white animate-wave"
+                role="img"
+                aria-labelledby="wave"
+              >
+                👋🏻
+              </span>
             </h1>
             <h1 className="text-white text-5xl font-bold m-4 sm:text-3xl lg:text-4xl">
               I'M{' '}
@@ -35,10 +64,10 @@ const Home = () => {
             </h1>
           </div>
 
-          <div className="p-4 m-5 w-200">
+          <div className="p-4 m-5 w-200 flex text-start">
             <div className="flex-col items-center justify-center p-4 ">
               <p className="text-white text-xl mb-5">
-                I like to Design and Develop.
+                I like to Develop and Desgin in the web development.
               </p>
               <p className="text-white text-xl mb-5">
                 I am fluent in{' '}
@@ -49,7 +78,7 @@ const Home = () => {
                 merge with AI.
               </p>
               <p className="text-white text-xl mb-5">
-                I am Passionate
+                I am
                 <span className="text-blue-500">
                   {' '}
                   MERN stack developer,
@@ -72,7 +101,8 @@ const Home = () => {
             </div>
             <div className="text-white">
               <p>
-                Feel Free to <span>Connect with me</span>
+                Feel Free to <span className="text-blue-600">Connect</span> with
+                me
               </p>
             </div>
           </div>
