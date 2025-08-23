@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from '../../Assets/Photo.jpg';
+import Type from './Type';
 
 const Home = () => {
   return (
@@ -28,8 +29,8 @@ const Home = () => {
 
       <div className=" bg-slate-900 h-screen flex items-center justify-center sm:p-8 lg:p-12 font-sans">
         <div className=" flex flex-col md:flex-row items-center justify-around w-full max-w-7xl mx-auto mb-16 md:mb-24 mt-8 md:mt-0">
-          <div className="order-2 md:order-1 text-center md:text-left p-4 md:p-8">
-            <h1 className="bg-gradient-to-r from-blue-500 to-purple-950 text-transparent bg-clip-text text-4xl sm:text-3xl lg:text-4xl font-extrabold mb-2 ">
+          <div className="order-2 md:order-1 text-center md:text-left p-4 md:p-8 justify-center">
+            <h1 className="bg-gradient-to-r from-blue-500 to-purple-950 text-transparent bg-clip-text text-4xl sm:text-3xl lg:text-4xl font-extrabold m-4">
               Hi There!{' '}
               <span
                 className="text-white animate-wave"
@@ -41,10 +42,16 @@ const Home = () => {
             </h1>
             <h1 className="text-white text-5xl font-bold m-4 sm:text-3xl lg:text-4xl">
               I'M{' '}
-              <span className="bg-gradient-to-r  from-blue-500 via-purple-500 to-pink-500  text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r  from-blue-500 via-purple-500 to-pink-500  text-transparent bg-clip-text mb-4">
                 SANJANA PANCHAL
               </span>
             </h1>
+
+            <div className="bg-gradient-to-l from-blue-600 to-purple-700 text-transparent bg-clip-text text-4xl m-4">
+              <div className="mt-8">
+                <Type />
+              </div>
+            </div>
           </div>
           <div className="order-1 md:order-2 p-4 md:p-8">
             <img
