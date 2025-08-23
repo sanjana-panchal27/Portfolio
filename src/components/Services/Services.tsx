@@ -1,8 +1,9 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import webDev from '../../Assets/Services/webDev.png';
 import { Col, Row } from 'react-bootstrap';
 
-const services = (props) => {
+const services = () => {
   return (
     <>
       <div className="bg-slate-900 p-8 text-gray-200 font-sans">
@@ -20,7 +21,11 @@ const services = (props) => {
           <Row>
             <Col>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <ServiceCard />
+                <ServiceCard
+                  imgPath={webDev}
+                  title="Web Development"
+                  description="web development"
+                />
               </div>
             </Col>
           </Row>
