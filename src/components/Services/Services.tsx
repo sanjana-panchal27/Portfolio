@@ -24,7 +24,7 @@ const services = () => {
                 <ServiceCard
                   imgPath={webDev}
                   title="Web Development"
-                  description="web development"
+                  description="I offer comprehensive web development services, focusing on creating dynamic, responsive, and modern websites. My expertise spans the entire development lifecycle, from initial design and front-end implementation to robust back-end functionality. I specialize in building fast, secure, and scalable web applications that deliver a seamless user experience across all devices. Whether you need a simple portfolio site, a complex e-commerce platform, or a custom web application, I am dedicated to turning your vision into a reality with clean, efficient, and well-documented code."
                 />
               </div>
             </Col>

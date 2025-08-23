@@ -57,7 +57,7 @@ const Home = () => {
             <img
               src={Photo}
               alt="Profile Photo"
-              className="h-100 w-100 object-contain rounded-full p-3  shadow-amber-200 shadow-md border-4 border-amber-100 sm:w-64 sm:h-64 md:w-90 md:h-90 lg:w-96 lg:h-96 shadow-lg transition-transform duration-300 transform hover:scale-105"
+              className="h-100 w-100 object-contain rounded-full p-3  shadow-amber-200 border-4 border-amber-100 sm:w-64 sm:h-64 md:w-90 md:h-90 lg:w-96 lg:h-96 shadow-lg transition-transform duration-300 transform hover:scale-105"
             />
           </div>
         </div>

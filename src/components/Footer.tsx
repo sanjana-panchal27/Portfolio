@@ -4,6 +4,8 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from 'react-icons/ai';
+import Link from 'react-router-dom';
+import { NavLink } from 'reactstrap';
 
 const Footer = () => {
   let date = new Date();
@@ -11,6 +13,9 @@ const Footer = () => {
   return (
     <>
       <div className="bg-blue-900 p-4">
+        <div className="text-white cursor-pointer">
+          <NavLink to="/contact">Contact</NavLink>
+        </div>
         <div className="text-white flex items-center justify-center mb-2">
           <h3 className="text-xl">Designed and Developed by Sanjana Panchal</h3>
         </div>
