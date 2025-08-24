@@ -1,26 +1,23 @@
 import React from 'react';
 
 const Contact = () => {
-  // Use a simplified form submission approach using the native form attributes.
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSuccess, setIsSuccess] = React.useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Get form data
+
     const form = e.target;
     const formData = new FormData(form);
-    
-    // Submit form to Formspree endpoint
+
     try {
       const response = await fetch('https://formspree.io/f/xkgvwrkg', {
         method: 'POST',
         body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          Accept: 'application/json',
+        },
       });
       if (response.ok) {
         setIsSuccess(true);
@@ -35,7 +32,6 @@ const Contact = () => {
     }
   };
 
-  // Original state and handlers for other sections
   const [hoveredCard, setHoveredCard] = React.useState(null);
 
   const contactMethods = [
@@ -200,7 +196,6 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* This is the new section for conditional rendering */}
             {isSuccess ? (
               <div className="p-8 text-center">
                 <h2 className="text-3xl font-bold text-white mb-4">
@@ -214,26 +209,34 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="group">
-                    <label htmlFor="name" className="block text-slate-300 text-sm font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-slate-300 text-sm font-medium mb-2"
+                    >
                       Your Name *
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="Name"
+                      autoComplete="off"
                       className="w-full px-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm"
                       placeholder="John Doe"
                     />
                   </div>
-  
+
                   <div className="group">
-                    <label htmlFor="email" className="block text-slate-300 text-sm font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-slate-300 text-sm font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="Email"
+                      autoComplete="off"
                       className="w-full px-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm"
                       placeholder="john@example.com"
                     />
@@ -241,25 +244,33 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-slate-300 text-sm font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-slate-300 text-sm font-medium mb-2"
+                  >
                     Project Subject *
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="Subject"
+                    autoComplete="off"
                     className="w-full px-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm"
                     placeholder="Web Development Project"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-slate-300 text-sm font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-slate-300 text-sm font-medium mb-2"
+                  >
                     Tell me about your project *
                   </label>
                   <textarea
                     id="message"
                     name="Message"
+                    autoComplete="off"
                     rows="6"
                     className="w-full px-4 py-4 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm resize-none"
                     placeholder="Describe your project requirements, timeline, and any specific features you need..."
@@ -291,11 +302,10 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Quick Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           {[
             { number: '24h', label: 'Response Time' },
-            { number: '50+', label: 'Projects Completed' },
+            { number: '2+', label: 'Projects Completed' },
             { number: '100%', label: 'Client Satisfaction' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
@@ -307,7 +317,6 @@ const Contact = () => {
           ))}
         </div>
 
-        {/* Footer CTA */}
         <div className="text-center mt-20 pb-20">
           <p className="text-slate-400 text-lg mb-6">
             Ready to start your project? Let's make something incredible
