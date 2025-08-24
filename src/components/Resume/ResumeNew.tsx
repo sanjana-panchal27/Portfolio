@@ -13,7 +13,7 @@ const ResumeNew = () => {
   }, []);
 
   return (
-    <div className="bg-slate-900 text-white">
+    <div className="bg-slate-900 min-h-screen text-white p-8 font-sans flex justify-center">
       <Container>
         <Particle />
 

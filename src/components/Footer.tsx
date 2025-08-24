@@ -5,7 +5,7 @@ import {
   AiFillInstagram,
 } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom'; // Using NavLink from react-router-dom instead of reactstrap
+import Contact from './Contact';
 
 const Footer = () => {
   let date = new Date();
@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="bg-blue-900 p-4 text-white">
       <div className="text-center md:text-left cursor-pointer mb-2">
-        <NavLink to="/contact">Contact</NavLink>
+        <a href="/contact">Contact</a>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center text-center mt-4">

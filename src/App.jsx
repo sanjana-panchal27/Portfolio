@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Projects from './components/Projects/Projects';
 import Resume from './components/Resume/ResumeNew';
 import Services from './components/Services/services';
+import BlogPage from './components/Blog/Blog';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <Footer />
