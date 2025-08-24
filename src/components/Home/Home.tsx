@@ -1,6 +1,13 @@
 import React from 'react';
 import Photo from '../../Assets/Photo.jpg';
 import Type from './Type';
+import Tilt from 'react-parallax-tilt';
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 const Home = () => {
   return (
@@ -27,7 +34,7 @@ const Home = () => {
         `}
       </style>
 
-      <div className=" bg-slate-900 h-screen flex items-center justify-center sm:p-8 lg:p-12 font-sans">
+      <div className=" bg-slate-900 min-h-screen flex items-center justify-center sm:p-8 lg:p-12 font-sans">
         <div className=" flex flex-col md:flex-row items-center justify-around w-full max-w-7xl mx-auto mb-16 md:mb-24 mt-8 md:mt-0">
           <div className="order-2 md:order-1 text-center md:text-left p-4 md:p-8 justify-center">
             <h1 className="bg-gradient-to-r from-blue-500 to-purple-950 text-transparent bg-clip-text text-4xl sm:text-3xl lg:text-4xl font-extrabold m-4">
@@ -54,37 +61,39 @@ const Home = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 p-4 md:p-8">
-            <img
-              src={Photo}
-              alt="Profile Photo"
-              className="h-100 w-100 object-contain rounded-full p-3  shadow-amber-200 border-4 border-amber-100 sm:w-64 sm:h-64 md:w-90 md:h-90 lg:w-96 lg:h-96 shadow-lg transition-transform duration-300 transform hover:scale-105"
-            />
+            <Tilt>
+              <img
+                src={Photo}
+                alt="Profile Photo"
+                className="h-100 w-100 object-contain rounded-full p-3  shadow-amber-200 border-4 border-amber-100 sm:w-64 sm:h-64 md:w-90 md:h-90 lg:w-96 lg:h-96 shadow-lg transition-transform duration-300 transform hover:scale-105"
+              />
+            </Tilt>
           </div>
         </div>
       </div>
 
-      <div className=" bg-slate-950 h-200 flex items-center justify-center sm:px-6 lg:px-8 w-full max-w-8xl mx-auto p-4 md:p-8">
-        <div className="text-center">
-          <div className="flex items-center justify-center p-4">
+      <div className=" bg-slate-950 min-h-screen flex items-center justify-center sm:px-6 lg:px-8 w-full max-w-8xl mx-auto p-4 md:p-8">
+        <div className="w-full max-w-5xl mx-auto text-center">
+          <div className="p-4">
             <h1 className="bg-gradient-to-r from-blue-500 to-blue-800 text-transparent bg-clip-text text-3xl font-bold">
               LET ME INTRODUCE MYSELF
             </h1>
           </div>
 
-          <div className="p-4 m-5 w-200 flex text-start">
-            <div className="flex-col items-center justify-center p-4 ">
-              <p className="text-white text-xl mb-5">
+          <div className="p-4 mt-5">
+            <div className="flex flex-col text-left">
+              <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
                 I like to Develop and Desgin in the web development.
               </p>
-              <p className="text-white text-xl mb-5">
+              <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
                 I am fluent in{' '}
                 <span className="text-blue-500">C++, JavaScript.</span>
               </p>
-              <p className="text-white text-xl mb-5">
+              <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
                 My Field of Interest's are building new Web Development and
                 merge with AI.
               </p>
-              <p className="text-white text-xl mb-5">
+              <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
                 I am
                 <span className="text-blue-500">
                   {' '}
@@ -111,6 +120,54 @@ const Home = () => {
                 Feel Free to <span className="text-blue-600">Connect</span> with
                 me
               </p>
+
+              <div className="">
+                <ul className="flex justify-center gap-4 mt-4 text-3xl p-2">
+                  <li className="text-blue-700 bg-white p-2 rounded-full  hover:shadow-blue-800 shadow-lg transition-transform duration-300 transform hover:scale-105">
+                    <a
+                      className=""
+                      href="https://github.com/sanjana-panchal27"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillGithub />
+                    </a>
+                  </li>
+
+                  <li className="text-blue-700 bg-white p-2 rounded-full  hover:shadow-blue-800 shadow-lg transition-transform duration-300 transform hover:scale-105">
+                    <a
+                      className=""
+                      href="https://x.com/SanjanaPan58639"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiOutlineTwitter />
+                    </a>
+                  </li>
+
+                  <li className="text-blue-700 bg-white p-2 rounded-full  hover:shadow-blue-800 shadow-lg transition-transform duration-300 transform hover:scale-105">
+                    <a
+                      className=""
+                      href="https://www.linkedin.com/in/sanjana-panchal27/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedinIn />
+                    </a>
+                  </li>
+
+                  <li className="text-blue-700 bg-white p-2 rounded-full  hover:shadow-blue-800 shadow-lg transition-transform duration-300 transform hover:scale-105">
+                    <a
+                      className=""
+                      href="https://www.instagram.com/_sanjana731_?igsh=MXJzamwyenBlODExcA%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
