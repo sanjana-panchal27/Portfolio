@@ -29,6 +29,10 @@ const ResumeNew = () => {
           </a>
         </div>
 
+        <div className="img">
+          <img src="" alt="CV" />
+        </div>
+
         <Row className="justify-center">
           <Document file={pdf}>
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
