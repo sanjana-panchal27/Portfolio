@@ -8,6 +8,8 @@ import Resume from './components/Resume/ResumeNew';
 import Services from './components/Services/services';
 import BlogPage from './components/Blog/Blog';
 import Contact from './components/Contact';
+import { PDFViewer } from '@react-pdf/renderer';
+import ReactDOM from 'react-dom';
 
 function App() {
   return (
@@ -18,10 +20,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/resume" element={<Resume />} />
+
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<Contact />} />
+          <PDFViewer>
+            <Route path="/resume" element={<Resume />} />
+          </PDFViewer>
         </Routes>
 
         <Footer />
@@ -29,5 +34,7 @@ function App() {
     </>
   );
 }
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;

@@ -1,11 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Particle from '../Particle';
-import pdf from '../../Assets/CV_Aug.pdf';
 import { AiOutlineDownload } from 'react-icons/ai';
-import { Document, Page, pdfjs } from 'react-pdf';
+// import Resume from '../../Assets/Resume';
+
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4',
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+  },
+});
 
 const ResumeNew = () => {
+  const pdf = '/CV_Aug.pdf';
+
   const [width, setWidth] = useState(1200);
 
   useEffect(() => {
@@ -29,15 +43,27 @@ const ResumeNew = () => {
           </a>
         </div>
 
-        <div className="img">
-          <img src="" alt="CV" />
-        </div>
+        {/* <div className="flex justify-center p-4 mt-4">
+          <img src={Resume} alt="CV" height={600} width={600} />
+        </div> */}
 
-        <Row className="justify-center">
-          <Document file={pdf}>
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
+        <Document>
+          <Page size="A4" style={styles.page}>
+            <View style={styles.page}></View>
+          </Page>
+        </Document>
+
+        <div className="flex justify-center">
+          <a
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 ease-in-out justify-center mt-8"
+          >
+            <AiOutlineDownload />
+            Download CV
+          </a>
+        </div>
       </Container>
     </div>
   );
