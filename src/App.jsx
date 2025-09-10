@@ -24,9 +24,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<Contact />} />
-          <PDFViewer>
-            <Route path="/resume" element={<Resume />} />
-          </PDFViewer>
+          <Route path="/resume" element={<Resume />} />
         </Routes>
 
         <Footer />
@@ -34,7 +32,5 @@ function App() {
     </>
   );
 }
-
-ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;

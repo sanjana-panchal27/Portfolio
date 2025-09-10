@@ -1,4 +1,5 @@
 import React from 'react';
+import ProjectCards from './Projects/ProjectCards';
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -330,10 +331,10 @@ const Contact = () => {
               Schedule a Free Call
             </a>
             <a
-              href="#"
+              href="/projects"
               className="px-8 py-4 bg-slate-800 text-white rounded-xl font-medium border border-slate-600 hover:bg-slate-700 transition-all"
             >
-              View My Work
+              View My Work 
             </a>
           </div>
         </div>

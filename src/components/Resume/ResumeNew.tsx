@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Particle from '../Particle';
 import { AiOutlineDownload } from 'react-icons/ai';
-// import Resume from '../../Assets/Resume';
-
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+
 const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
@@ -31,29 +30,25 @@ const ResumeNew = () => {
       <Container>
         <Particle />
 
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center min-h-screen">
           <a
             href={pdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 ease-in-out justify-center mt-8"
+            className="flex items-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-200 ease-in-out justify-center text-2xl"
           >
             <AiOutlineDownload />
             Download CV
           </a>
         </div>
 
-        {/* <div className="flex justify-center p-4 mt-4">
-          <img src={Resume} alt="CV" height={600} width={600} />
-        </div> */}
-
-        <Document>
+        {/* <Document>
           <Page size="A4" style={styles.page}>
             <View style={styles.page}></View>
           </Page>
-        </Document>
+        </Document> */}
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <a
             href={pdf}
             target="_blank"
@@ -63,7 +58,7 @@ const ResumeNew = () => {
             <AiOutlineDownload />
             Download CV
           </a>
-        </div>
+        </div> */}
       </Container>
     </div>
   );
