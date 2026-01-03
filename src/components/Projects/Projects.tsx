@@ -7,7 +7,7 @@ import DocuHub from '../../Assets/Projects/DocuHub.png';
 const Projects = () => {
   return (
     <>
-      <div className="bg-slate-900 p-8 text-gray-200 font-sans">
+      <div className="bg-slate-900 p-8 h-200 text-gray-200 font-sans">
         <div className="p-6 text-center">
           <div className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-purple-500 to-pink-500">
             <h1 className="text-white text-4xl font-extrabold text-center mb-2">

@@ -83,7 +83,7 @@ const Home = () => {
           <div className="p-4 mt-5">
             <div className="flex flex-col text-left">
               <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
-                I like to Develop and Desgin in the web development.
+                I like to Develop and Design in the web development.
               </p>
               <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
                 I am fluent in{' '}
