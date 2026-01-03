@@ -86,7 +86,7 @@ const Home = () => {
                 I like to Develop and Design in the web development.
               </p>
               <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
-                I am fluent in{' '}
+                I am Proficient in{' '}
                 <span className="text-blue-500">C++, JavaScript.</span>
               </p>
               <p className="text-white text-base sm:text-lg lg:text-xl mb-5">
