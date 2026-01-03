@@ -30,7 +30,7 @@ const services = () => {
             </Col>
           </Row>
         </div>
-      </div>``
+      </div>
     </>
   );
 };
